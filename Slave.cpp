@@ -462,7 +462,6 @@ connected:
     LOG_INFO(log, "Starting from binlog_pos: " << m_master_info.position);
 
     request_dump(m_master_info.position, &mysql);
-    gtid_t gtid_next;
 
     while (!_interruptFlag()) {
 

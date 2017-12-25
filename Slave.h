@@ -51,6 +51,7 @@ public:
     typedef std::map<std::pair<std::string, std::string>, callback> callbacks_t;
     typedef std::map<std::pair<std::string, std::string>, filter> filters_t;
 
+	gtid_t gtid_next;
 
 private:
     static inline bool falseFunction() { return false; };
