@@ -41,7 +41,7 @@ AUX_SOURCE_DIRECTORY (${CMAKE_SOURCE_DIR} SRC)
 
 ADD_LIBRARY (slave_a ${SRC})
 SET_TARGET_PROPERTIES (slave_a PROPERTIES OUTPUT_NAME slave)
-TARGET_LINK_LIBRARIES (slave_a ${LMYSQLCLIENT_R})
+TARGET_LINK_LIBRARIES (slave_a ${LMYSQLCLIENT_R} dl)
 INSTALL (TARGETS slave_a DESTINATION lib64)
 
 # Most probably statc mysql is built without fPIC, so, we can't build dynamic library with it
